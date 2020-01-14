@@ -14,9 +14,11 @@ let firstJob = "Dish Washer";
 let hourlyRate = 125;
 
 let text = "Hello, " + firstName + " " + lastName + ". You are " + age + " years old and were born in " + bornCity + ", and currently live in " + currCity + ".\n"
-+ "Your first job was at " + firstName + " making " + hourlyRate + "/hour.\n"
++ "Your first job was at " + firstJob + " making " + hourlyRate + "/hour.\n"
 + "I asked if you were married and you said " + isMerried + "."
 
-text = `Hello, ${fName} ${lName}. You are ${age} years old and were born in${bornCity}, and currently live in ${currCity}.\n`
-+ `Your first job was at ${bornCity} making ${hourlyRate}/hour.\n`
+text = `Hello, ${firstName} ${lastName}. You are ${age} years old and were born in ${bornCity}, and currently live in ${currCity}.\n`
++ `Your first job was at ${firstJob} making ${hourlyRate.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}/hour.\n`
 + `I asked if you were married and you said ${isMerried}.`
+
+console.log(text);
